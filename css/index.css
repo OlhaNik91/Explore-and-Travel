@@ -18,6 +18,7 @@
 /*typography*/
 
 h1, .h1{
+    margin-bottom: 74px;
     font-family: 'Playfair Display';
     font-weight: 700;
     font-size: 64px;
@@ -34,11 +35,20 @@ h2, .h2{
 }
 
 h3, .h3{
+    padding-bottom: 21px;
     font-family: 'Inter';
     font-weight: 600;
     font-size: 22px;
     line-height: 27px;
     color: #202336;
+}
+
+h2.h3 ::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url(/img/line.svg);
 }
 
 h4, .h4{
@@ -152,7 +162,6 @@ a {
 
 a:hover {
     color: #c26d13;
-    /*padding-right: 15px;*/
 }
 
 a.view-all {
@@ -168,7 +177,7 @@ a.view-all::after {
     display: block;
     width: 6px;
     height: 100%;
-    background-image: url(../img/arrow.svg);
+    background-image: url(../img/arrow-a.svg);
     background-repeat: no-repeat;
     background-position: 50%;
     transform: translateX(100%);
@@ -184,26 +193,48 @@ a:visited {
     color: #db7a13;
 }
 
+/*form*/
+
+fieldset{
+    display: flex;
+    margin-bottom: 35px;
+    border: 0;
+}
+
+div.select-wrapper{
+    position: relative;
+    margin-right: 30px;
+}
+
+div.select-wrapper::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    
+    background-image: url(/img/arrow-select.svg);
+
+}
+
 select{
-    display: inline-block;
     width: 220px;
-    height: 52px;
-    padding: 10px 0px 10px 31px;
-    border: 0.8px solid #AFB0B9;
-    border-radius: 6px;
     min-width: 60px;
     min-height: 10px;
+    padding: 0 31px;
+    border: 1px solid #AFB0B9;
+    border-radius: 6px;
     font-family: 'Inter';
     font-weight: 400;
     font-size: 15px;
-    line-height: 32px;
-    color: #4A4C53;     
+    line-height: 50px;
+    color: #4A4C53;
+    appearance: none;     
 }
 
 /*header*/
 
 header{
     padding: 43px 0;
+    line-height: 81px;
 }
 
 nav{
@@ -244,3 +275,19 @@ nav{
     line-height: 42px;
 }
 
+/*sectian-1*/
+section.form-and-image{
+    padding-bottom: 286px;
+}
+
+div.section-container{
+
+}
+
+div.text-and-form-wrapp{
+
+}
+
+button[type="submit"]{
+    margin-top: 16px;
+}
