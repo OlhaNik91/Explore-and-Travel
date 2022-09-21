@@ -1,3 +1,13 @@
+:root {
+    --basic-font: 'Mulish';
+    --secondary-font: 'Inter';
+    --third-font: 'Playfair Display';
+
+    --primary-color: #FB8F1D;
+    --primary-hover-color:#f99934;
+    --text-color:#7D7987;
+}
+
 /* base styles*/ 
 
 *{
@@ -7,18 +17,19 @@
 }
 
 .section-container{
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1340px;
     margin: 0 auto;
-    padding: 0 60px;
+   padding: 0 60px;
 }
 
 /*typography*/
 
 h1, .h1{
-    margin-bottom: 74px;
+    margin-bottom: 71px;
     font-family: 'Playfair Display';
     font-weight: 700;
     font-size: 64px;
@@ -27,6 +38,7 @@ h1, .h1{
 }
 
 h2, .h2{
+    padding-bottom: 20px;
     font-family: 'Playfair Display';
     font-weight: 700;
     font-size: 36px;
@@ -35,20 +47,11 @@ h2, .h2{
 }
 
 h3, .h3{
-    padding-bottom: 21px;
     font-family: 'Inter';
     font-weight: 600;
     font-size: 22px;
-    line-height: 27px;
+    line-height: 29px;
     color: #202336;
-}
-
-h2.h3 ::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-image: url(/img/line.svg);
 }
 
 h4, .h4{
@@ -197,7 +200,7 @@ a:visited {
 
 fieldset{
     display: flex;
-    margin-bottom: 35px;
+    margin-bottom: 36px;
     border: 0;
 }
 
@@ -209,17 +212,21 @@ div.select-wrapper{
 div.select-wrapper::after{
     content: '';
     position: absolute;
-    top: 50%;
-    
-    background-image: url(/img/arrow-select.svg);
-
+    display: block;
+    top: 4px;
+    right: 29px;
+    background-image: url(../img/arrow-select.svg);
+    width: 10px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    pointer-events: none;
 }
 
 select{
     width: 220px;
     min-width: 60px;
-    min-height: 10px;
-    padding: 0 31px;
+    padding: 0 20px 0 31px ;
     border: 1px solid #AFB0B9;
     border-radius: 6px;
     font-family: 'Inter';
@@ -230,11 +237,16 @@ select{
     appearance: none;     
 }
 
+
 /*header*/
 
 header{
+    position: fixed;
+    top: 0;
+    width: 100%;
     padding: 43px 0;
-    line-height: 81px;
+    background-color: white;
+    z-index: 1;
 }
 
 nav{
@@ -248,11 +260,11 @@ nav{
     list-style: none;
 }
 .menu li a{
-    padding: 8px 17px;
+    padding: 6px 13px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 19px;
     color: #B8BECD;
 }
@@ -268,26 +280,157 @@ nav{
 
 .buttons li button {
     min-width: 132px;
-    padding: 0 36px;
     margin-left: 18px;
+    padding: 0 36px;
     font-weight: 500;
     font-size: 15px;
     line-height: 42px;
 }
 
-/*sectian-1*/
-section.form-and-image{
-    padding-bottom: 286px;
+
+/*form and image*/
+form{
+    margin-top: 34px;
+    margin-bottom: 14px;
 }
 
-div.section-container{
-
+.form-and-image{
+    position: relative;
+    padding-top: 167px;
+    padding-bottom: 143px;
 }
 
-div.text-and-form-wrapp{
-
+.form-and-image .h3{
+    position: relative;
+    margin-bottom: 48px;
+    padding-bottom: 23px;
+    font-size: 22px;
 }
 
-button[type="submit"]{
-    margin-top: 16px;
+.form-and-image .h3::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 32px;
+    height: 2px;
+    background-color: #202336; 
+}
+
+.form-and-image .main-picture{
+    padding-left: 117px;
+}
+
+.form-and-image .circle{
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    max-width: 26px;
+    height: auto;
+}
+
+.form-and-image .plus{
+    position: absolute;
+    top: 54px;
+    left: 39%;
+    width: auto;
+    height: 20px;
+    transform: rotate(-8deg);
+}
+
+.form-and-image .mini-circle{
+    position: absolute;
+    left: 45%;
+    bottom: 17px;
+    max-width: 20px;
+    height: auto;
+}
+
+.explore {
+    margin-top: 17px;
+    min-width: 179px;
+}
+.text-and-form-wrapp .section-container{
+    margin-left: 60px;
+}
+        
+
+/*text and image*/
+
+.text-and-image{
+    position: relative;
+    padding: 137px;
+}
+
+.section-picture{
+    margin-left: -57px;
+}
+.text-wrapper {
+    max-width: 436px;
+    margin-right: 65px;
+}
+
+.text-wrapper .button{
+    margin-top: 39px;
+}
+
+.text-and-image .plus {
+    position: absolute;
+    top: -6px;
+    left: 52%;
+    width: auto;
+    height: 20px;
+}
+
+.text-and-image .mini-circle {
+    position: absolute;
+    bottom: 145px;
+    left: 82%;
+    max-width: 20px;
+    height: auto;
+}
+
+
+/*text and image reverse*/
+
+.text-and-image.reverse .section-container{
+    position: relative;
+    flex-direction: row-reverse;
+   
+}
+
+.text-and-image.reverse .section-picture {
+    margin-right: 29px;
+}
+
+.text-and-image.reverse .text-wrapper{
+    margin-top: 60px;
+    margin-left: 45px;
+   
+}
+
+.text-and-image.reverse .mini-circle {
+    position: absolute;
+    top: 85px;
+    left: 11%;
+    max-width: 20px;
+    height: auto;
+}
+
+.text-and-image.reverse .plus {
+    position: absolute;
+    width: auto;
+    height: 16px;
+    top: 36px;
+    left: 98%;
+}
+
+.text-and-image.reverse .plus-second {
+    position: absolute;
+    width: auto;
+    height: 20px;
+    left: 40%;
+    bottom: 98px;
+    transform: rotate(11deg);
 }
