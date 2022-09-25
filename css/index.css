@@ -1,3 +1,5 @@
+/*vaviables*/
+
 :root {
     --basic-font: 'Mulish';
     --secondary-font: 'Inter';
@@ -5,7 +7,11 @@
 
     --primary-color: #FB8F1D;
     --primary-hover-color:#f99934;
+    --header-color: #B8BECD;
+    --title-color: #000000;
     --text-color:#7D7987;
+    --quote-color: #000000;
+    --footer-color: #848484;
 }
 
 /* base styles*/ 
@@ -38,7 +44,6 @@ h1, .h1{
 }
 
 h2, .h2{
-    padding-bottom: 20px;
     font-family: 'Playfair Display';
     font-weight: 700;
     font-size: 36px;
@@ -184,13 +189,12 @@ a.view-all::after {
     background-repeat: no-repeat;
     background-position: 50%;
     transform: translateX(100%);
-    padding-right: 11px;
+    padding-right: 17px;
 }
 
 a.view-all:hover::after{
    padding-right: 15px;
 }
-
 
 a:visited {
     color: #db7a13;
@@ -326,14 +330,14 @@ form{
     position: absolute;
     top: 50%;
     left: -50px;
-    max-width: 26px;
+    width: 26px;
     height: auto;
 }
 
 .form-and-image .plus{
     position: absolute;
     top: 54px;
-    left: 39%;
+    left: 527px;
     width: auto;
     height: 20px;
     transform: rotate(-8deg);
@@ -343,7 +347,7 @@ form{
     position: absolute;
     left: 45%;
     bottom: 17px;
-    max-width: 20px;
+    width: 20px;
     height: auto;
 }
 
@@ -360,15 +364,21 @@ form{
 
 .text-and-image{
     position: relative;
-    padding: 137px;
+    padding: 137px 0;
 }
 
-.section-picture{
-    margin-left: -57px;
+.text-and-image .main-picture{
+    margin-left: -51px;
+    margin-top: 7px;
 }
 .text-wrapper {
     max-width: 436px;
-    margin-right: 65px;
+    margin-right: 72px;
+    margin-bottom: 8px;
+}
+
+.text-wrapper h2{
+    margin-bottom: 20px;
 }
 
 .text-wrapper .button{
@@ -377,7 +387,7 @@ form{
 
 .text-and-image .plus {
     position: absolute;
-    top: -6px;
+    top: -7px;
     left: 52%;
     width: auto;
     height: 20px;
@@ -385,10 +395,90 @@ form{
 
 .text-and-image .mini-circle {
     position: absolute;
-    bottom: 145px;
+    bottom: 152px;
     left: 82%;
-    max-width: 20px;
+    width: 20px;
     height: auto;
+}
+
+
+/*featured destination*/
+
+.featured-destination{
+    margin-bottom: 55px;
+}
+
+.featured-destination .section-container{
+    flex-direction: column;
+    width: 1220px;
+    padding-top: 155px;
+    padding-bottom: 34px;
+}
+
+.featured-destination .title-section{
+    display: flex;
+}
+
+.title-section h2{
+    width: 610px;
+    margin-left: -16px;
+}
+
+.title-section a.view-all{
+    margin-left: 432px;
+}
+
+.destination {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    list-style: none;
+    margin-top: 46px;
+}
+
+.destination li{
+    margin: 0 13px;
+}
+
+.destination img{
+    position: relative;
+    border-radius: 8px;
+}
+
+.destination figcaption{
+    position: absolute;
+    display: block;
+    bottom: 4px;
+    width: 120px;
+    height: 56px;
+    padding-top: 11px;
+    border-radius: 0px 6px 0px 0px;
+    background-color: #FFFFFF;
+    z-index: 1;
+}
+
+.featured-destination .plus{
+    position: absolute;
+    width: 20px;
+    height: auto;
+    bottom: 156px;
+    left: -67px;
+}
+
+.featured-destination .mini-circle-top{
+    position: absolute;
+    width: 20px;
+    height: auto;
+    top: 125px;
+    right: 221px;
+}
+
+.featured-destination .mini-circle{
+    position: absolute;
+    width: 20px;
+    height: auto;
+    bottom: -25px;
+    left: 45%;
 }
 
 
@@ -396,41 +486,39 @@ form{
 
 .text-and-image.reverse .section-container{
     position: relative;
-    flex-direction: row-reverse;
-   
+    flex-direction: row-reverse; 
 }
 
-.text-and-image.reverse .section-picture {
-    margin-right: 29px;
+.text-and-image.reverse .main-picture {
+    margin-right: 41px;
 }
 
 .text-and-image.reverse .text-wrapper{
-    margin-top: 60px;
-    margin-left: 45px;
-   
+    margin-top: 73px;
+    margin-left: 49px; 
 }
 
 .text-and-image.reverse .mini-circle {
     position: absolute;
-    top: 85px;
-    left: 11%;
-    max-width: 20px;
+    top: 92px;
+    left: 154px;
+    width: 20px;
     height: auto;
 }
 
 .text-and-image.reverse .plus {
     position: absolute;
+    top: 45px;
+    left: 97%;
     width: auto;
     height: 16px;
-    top: 36px;
-    left: 98%;
-}
+}  
 
 .text-and-image.reverse .plus-second {
     position: absolute;
     width: auto;
     height: 20px;
-    left: 40%;
-    bottom: 98px;
-    transform: rotate(11deg);
+    left: 530px;
+    bottom: 100px;
+    transform: rotate(13deg);
 }
