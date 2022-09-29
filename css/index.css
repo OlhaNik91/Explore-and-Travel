@@ -92,6 +92,7 @@ figcaption{
 }
 
 figcaption span{
+    display: block;
     font-family: 'Inter';
     font-weight: 500;
     font-size: 15px;
@@ -198,6 +199,15 @@ a.view-all:hover::after{
 
 a:visited {
     color: #db7a13;
+}
+
+.{
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #000000;
+    border-radius: 50%;
 }
 
 /*form*/
@@ -405,84 +415,92 @@ form{
 /*featured destination*/
 
 .featured-destination{
-    margin-bottom: 55px;
+    padding-top: 155px;
+    padding-bottom: 115px;
 }
 
 .featured-destination .section-container{
     flex-direction: column;
-    width: 1220px;
-    padding-top: 155px;
-    padding-bottom: 34px;
+    align-items: stretch;
 }
 
-.featured-destination .title-section{
+.featured-destination .title-wrapper{
     display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 65px;
 }
 
-.title-section h2{
-    width: 610px;
-    margin-left: -16px;
+.title-wrapper h2{
 }
 
-.title-section a.view-all{
-    margin-left: 432px;
+.title-wrapper a.view-all{
 }
 
 .destination {
-    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 25px;
     list-style: none;
-    margin-top: 46px;
+    justify-items: stretch;
+    margin: 46px 49px 0 50px;
 }
 
 .destination li{
-    margin: 0 13px;
+    
+}
+.destination figure{
+    position: relative;
+    width: 100%;
 }
 
 .destination img{
     position: relative;
+    width:  100%;
     border-radius: 8px;
 }
 
 .destination figcaption{
     position: absolute;
-    display: block;
-    bottom: 4px;
-    width: 120px;
-    height: 56px;
+    left: 0;
+    bottom: 0;
+    min-width: 120px;
     padding-top: 11px;
+    padding-right: 20px;
     border-radius: 0px 6px 0px 0px;
     background-color: #FFFFFF;
-    z-index: 1;
 }
 
 .featured-destination .plus{
     position: absolute;
     width: 20px;
     height: auto;
-    bottom: 156px;
-    left: -67px;
+    bottom: 124px;
+    left: -8px;
 }
 
 .featured-destination .mini-circle-top{
     position: absolute;
     width: 20px;
     height: auto;
-    top: 125px;
-    right: 221px;
+    top: -31px;
+    right: 281px;
 }
 
 .featured-destination .mini-circle{
     position: absolute;
     width: 20px;
     height: auto;
-    bottom: -25px;
-    left: 45%;
+    bottom: -59px;
+    left: 46%;
 }
 
 
 /*text and image reverse*/
+
+.text-and-image.reverse{
+    padding-top: 110px;
+}
 
 .text-and-image.reverse .section-container{
     position: relative;
@@ -521,4 +539,21 @@ form{
     left: 530px;
     bottom: 100px;
     transform: rotate(13deg);
+}
+
+
+/*testimonials*/
+
+.testimonials{
+    padding-top: 124px;
+    padding-bottom: 89px;
+}
+
+.testimonials .section-container {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.testimonials-slider{
+    max-width: 100%;
 }
