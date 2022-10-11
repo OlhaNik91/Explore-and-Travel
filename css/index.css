@@ -222,19 +222,6 @@ a:visited {
     border-color: #000000;
 }
 
-/* .slick-arrow::after { 
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    display: block;
-    width: 132px;
-    height: 60px;
-    border-radius: 16px 0px 0px 0px;;
-    background-color: #FFFFFF;
-    z-index: ;
-}*/
-
 
 /*form*/
 
@@ -286,7 +273,7 @@ header{
     width: 100%;
     padding: 43px 0;
     background-color: white;
-    z-index: 1;
+    z-index: 2;
 }
 
 nav{
@@ -636,8 +623,25 @@ cite{
     margin-right: 11px;
 }
 
-.slide .reviewer {
+.img-slider {
     position: relative;
+}
+
+.img-slider::after {
+    position: absolute;
+    content: '';
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 132px;
+    height: 60px;
+    border-radius: 16px 0px 0px 0px;
+    background-color: var(--fon-color);
+}
+
+.slide .reviewer {
+    width: 384px;
+    height: 491px;
     border-radius: 14px;
 }
    
@@ -651,6 +655,10 @@ cite{
     position: absolute;
     bottom: 0;
     right: 152px;
+}
+
+.slick-disabled{
+    opacity: 0.2;
 }
 
 /* Trending stories */
@@ -683,26 +691,31 @@ cite{
     margin: 0 50px;
 }
 
-.story-wrapper{
-    position: relative;
-    display: grid;
-    grid-template-rows: 231px 82px 105px 28px;
+.img-story{
+    display: block;
+    width: 261px;
+    height: 330px;
 }
 
-.story-wrapper img{
+.img-story img {
     border-radius: 8px 8px 0 0;
 }
 
-.story-wrapper .h4{
+.story-wrapper{
+    position: relative;
+    display: block;
     background-color: var(--fon-color);
+    width: 261px;
+    width: 262px;
+    bottom: 99px;
     padding-top: 13px;
-    padding-right: 5px;
 }
 
 .story-wrapper .story {
     background-color: var(--fon-color);
-    padding-top: 5px;
+    padding-top: 13px;
     padding-right: 12px;
+    padding-bottom: 23px;
 } 
 
 .trending-stories .plus{
@@ -722,6 +735,6 @@ cite{
 .trending-stories .circle-2 {
     position: absolute;
     width: 20px;
-    bottom: -75px;
+    bottom: 23px;
     right: 470px;
 }

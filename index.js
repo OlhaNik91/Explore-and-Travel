@@ -3,7 +3,7 @@ $(document).ready(function(){
     dots: false,
     fade: true,
     speed: 500,
-    infinity: false,
+    infinite: false,
     cssEase: 'linear'
   });
 });
