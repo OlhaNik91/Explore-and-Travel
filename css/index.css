@@ -518,6 +518,10 @@ form{
     border-radius: 8px;
 }
 
+.destination img:hover {
+    box-shadow: 5px 3px 8px var(--footer-color);
+}
+
 .destination figcaption{
     position: absolute;
     left: 0;
@@ -749,7 +753,11 @@ cite{
     height: 330px;
 }
 
-.img-story img {
+.img-story:hover {
+    box-shadow: 5px -3px 8px var(--footer-color);
+}
+
+ .img-story img { 
     border-radius: 8px 8px 0 0;
 }
 
