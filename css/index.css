@@ -176,11 +176,13 @@ a:hover {
     color: #c26d13;
 }
 
-a.view-all {
+ a.view-all {
     font-size: 17px;
     line-height: 60px;
+    padding-right: 5px;
 }
 
+/*
 a.view-all::after {
     content: '';
     position: absolute;
@@ -195,11 +197,16 @@ a.view-all::after {
     transform: translateX(100%);
     padding-right: 17px;
 }
-
-a.view-all:hover::after{
-   padding-right: 23px;
+*/
+a.view-all:hover{
+    padding-right: 23px;
     transition-duration: 0.5s;
+} 
+
+.arrow-view{ 
+    margin-right: -15px;
 }
+
 
 a:visited {
     color: #db7a13;
@@ -761,28 +768,29 @@ cite{
  
 .img-story{
     display: block;
-    height: 231px;
-    width: 100%;
-    object-fit: cover;
     border-radius: 8px 8px 0 0;
 }
 
 .img-story img{
     border-radius: 8px 8px 0 0;
+    object-fit: cover;
+    object-position: top;
+    height: 231px;
+    width: 100%;
 }
 
 .story-wrapper{
     position: relative;
     display: block;
     background-color: var(--fon-color);
-    padding-top: 13px;
+    margin-top: 10px;
     border-radius: 0 0 8px 8px;
 }
 
 .story-wrapper .story {
     background-color: var(--fon-color);
-    padding-top: 13px;
-    padding-bottom: 23px;
+    margin-top: 13px;
+    margin-bottom: 23px;
 } 
 
 .stories li {
