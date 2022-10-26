@@ -176,14 +176,18 @@ a:hover {
     color: #c26d13;
 }
 
- a.view-all {
+a.view-all {
     font-size: 17px;
     line-height: 60px;
-    padding-right: 5px;
 }
 
-/*
-a.view-all::after {
+a.view-all:hover{
+    padding-left: 15px;
+    transition-duration: 0.5s;
+    color: #c26d13;
+}
+
+ /* { 
     content: '';
     position: absolute;
     top: 0;
@@ -191,21 +195,16 @@ a.view-all::after {
     display: block;
     width: 6px;
     height: 100%;
-    background-image: url(../img/arrow-a.svg);
     background-repeat: no-repeat;
     background-position: 50%;
     transform: translateX(100%);
     padding-right: 17px;
-}
-*/
-a.view-all:hover{
+}*/
+
+/* a.view-all:hover{
     padding-right: 23px;
     transition-duration: 0.5s;
-} 
-
-.arrow-view{ 
-    margin-right: -15px;
-}
+}  */
 
 
 a:visited {
@@ -499,7 +498,7 @@ form{
     display: flex;
     justify-content: space-between;
     margin-left: 50px;
-    margin-right: 65px;
+    margin-right: 50px;
 }
 
 .title-wrapper h2{
@@ -547,8 +546,8 @@ form{
 }
 
 .destination figcaption:hover {
-    left: 5px;
-    bottom: 9px;
+    padding-bottom: 11px;
+    padding-left: 20px;
     transition-duration: 0.3s;
 }
 
@@ -753,7 +752,7 @@ cite{
     display: flex;
     justify-content: space-between;
     margin-left: 50px;
-    margin-right: 65px;
+    margin-right: 50px;
     margin-bottom: 46px;
 }
 
