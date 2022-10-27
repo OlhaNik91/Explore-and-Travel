@@ -181,37 +181,22 @@ a.view-all {
     line-height: 60px;
 }
 
-svg{
+.view-all svg{
     transform: translateX(100%);
-    fill:#FB8F1D;
 }
 
-svg:hover{
-    transform: translateX(200%);
-    fill:#c26d13;
+.view-all path{
+    stroke:#FB8F1D;
 }
-a.view-all:hover{
-    transition-duration: 0.5s;
+
+.view-all:hover svg path{
+    stroke:#c26d13;
     color: #c26d13;
 }
- /* { 
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: block;
-    width: 6px;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    transform: translateX(100%);
-    padding-right: 17px;
-}*/
 
-/* a.view-all:hover{
-    padding-right: 23px;
-    transition-duration: 0.5s;
-}  */
+.view-all:hover svg{
+    transform: translateX(200%);
+}
 
 a:visited {
     color: #db7a13;
@@ -694,9 +679,10 @@ cite{
     width: 200px;
 }
 
-.slide .stars{
-    display: inline;
+.stars li{
+    display: inline-grid;
     margin-right: 11px;
+    list-style-type: none;
 }
 
 .img-slider {
@@ -719,6 +705,8 @@ cite{
     width: 384px;
     height: 491px;
     border-radius: 14px;
+    object-fit: cover;
+    object-position: top;
 }
    
 .slick-prev {
