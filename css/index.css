@@ -856,18 +856,27 @@ footer ul {
     position: absolute;
     display: block;
     bottom: 0;
-    width:;
+    width: 100%;
     height: 1px;
     background-color: #C4C4C4;
 }
 
 .footer-wrapper nav{
     display: flex;
+    margin-right: -80px;
 }
 .footer-wrapper ul{
     min-width: 240px;
+    margin-left: 43px;
 }
 
+.footer-wrapper li{
+    transition: 0.2s ease-in-out;
+}
+
+.footer-wrapper li:hover {
+opacity: 0.5;
+transition: 0.2s ease-in-out;}
 
 .logo-text {
     max-width: 358px;
@@ -896,15 +905,6 @@ footer ul {
 .footer-wrapper h4{
     font-family: var(--basic-font);
     line-height: 60px;
-}
-
-.shop{
-    margin-left: 33px;
-}
-
-.interests{
-    margin-left: 47px;
-    margin-right: -79px;
 }
 
 .social-networks{
