@@ -179,10 +179,12 @@ a:hover {
 a.view-all {
     font-size: 17px;
     line-height: 60px;
+    
 }
 
 .view-all svg{
     transform: translateX(100%);
+    transition-duration: 0,5s;
 }
 
 .view-all path{
@@ -196,6 +198,7 @@ a.view-all {
 
 .view-all:hover svg{
     transform: translateX(200%);
+    transition-duration: 0,5s;
 }
 
 a:visited {
@@ -519,7 +522,7 @@ form{
     transition-duration: 0.3s;
 }
 
-.destination img:hover { 
+.location:hover img {
     transition: box-shadow 0.3s ease-in-out;
     box-shadow: 8px -5px 15px 1px rgba(0, 0, 0, 0.4);
 }
@@ -536,10 +539,9 @@ form{
     transition-duration: 0.3s;
 }
 
-.destination figcaption:hover {
-    padding-bottom: 11px;
+.location:hover figcaption {
+    min-width: 140px;
     padding-left: 20px;
-    transition-duration: 0.3s;
 }
 
 .featured-destination .plus{
@@ -711,10 +713,12 @@ cite{
    
 .slick-prev {
     position: absolute;
+    display: block;
     transform: rotate(180deg);
     bottom: 0;
     right: 214px;
 }
+
 .slick-prev:hover {
     transform: rotate(180deg);
 }
@@ -852,8 +856,8 @@ footer ul {
     position: absolute;
     display: block;
     bottom: 0;
-    width: 1219px;
-    height: 0.6px;
+    width:;
+    height: 1px;
     background-color: #C4C4C4;
 }
 
@@ -877,7 +881,7 @@ footer ul {
     line-height: 28px;
 }
 
-.logo-text .rights{
+.logo-text .copyright{
     font-size: 17px;
     margin-top: 53px;
 }
