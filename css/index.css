@@ -328,6 +328,10 @@ form{
     position: relative;
     padding-top: 167px;
     padding-bottom: 143px;
+    background: -moz-linear-gradient(top, rgba(249, 249, 251, 0.65) 0%, rgba(249, 249, 251, 0.62) 4%, rgba(0, 0, 0, 0) 100%);
+    background: -webkit-linear-gradient(top, rgba(249, 249, 251, 0.65) 0%, rgba(249, 249, 251, 0.62) 4%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(to bottom, rgba(249, 249, 251, 0.65) 0%, rgba(249, 249, 251, 0.62) 4%, rgba(0, 0, 0, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6f9f9fb', endColorstr='#00000000', GradientType=0);
 }
 
 .form-and-image .h3{
@@ -453,6 +457,10 @@ form{
 
 .text-wrapper h2{
     margin-bottom: 20px;
+    background: linear-gradient(45deg, #037f5a, #FB8F1D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #037f5a;
 }
 
 .text-wrapper .button{
