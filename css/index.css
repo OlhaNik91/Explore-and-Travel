@@ -849,13 +849,11 @@ footer .section-container {
 
 footer ul {
     list-style: none;
-    
 }
 
 .footer-wrapper{
     position: relative;
     display: flex;
-    justify-content: space-between;
     padding-bottom: 77px;
 }
 
@@ -871,11 +869,9 @@ footer ul {
 
 .footer-wrapper nav{
     display: flex;
-    margin-right: -80px;
 }
-.footer-wrapper ul{
-    min-width: 240px;
-    margin-left: 43px;
+.footer-wrapper ul:not(:first-child){
+    margin-left: 140px;
 }
 
 .footer-wrapper li{
@@ -889,6 +885,7 @@ transition: 0.2s ease-in-out;}
 .logo-text {
     max-width: 358px;
     margin-top: 8px;
+    margin-right: 142px;
 }
 
 .logo-text p{
