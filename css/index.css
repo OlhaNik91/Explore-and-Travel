@@ -275,7 +275,8 @@ header{
     top: 0;
     width: 100%;
     padding: 43px 0;
-    background-color: white;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
     z-index: 2;
 }
 
@@ -316,6 +317,25 @@ nav{
     font-size: 15px;
     line-height: 42px;
 }
+ .login-wrapper button.transparent{
+    position: relative;
+    border: 1px;
+    background: #FFF;
+}
+
+.login-wrapper button.transparent::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background: linear-gradient(to right, #015244, #FB8F1D);
+}
+
+
 
 
 /*form and image*/
@@ -328,10 +348,10 @@ form{
     position: relative;
     padding-top: 167px;
     padding-bottom: 143px;
-    background: -moz-linear-gradient(top, rgba(249, 249, 251, 0.65) 0%, rgba(249, 249, 251, 0.62) 4%, rgba(0, 0, 0, 0) 100%);
-    background: -webkit-linear-gradient(top, rgba(249, 249, 251, 0.65) 0%, rgba(249, 249, 251, 0.62) 4%, rgba(0, 0, 0, 0) 100%);
-    background: linear-gradient(to bottom, rgba(249, 249, 251, 0.65) 0%, rgba(249, 249, 251, 0.62) 4%, rgba(0, 0, 0, 0) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6f9f9fb', endColorstr='#00000000', GradientType=0);
+    background: -moz-linear-gradient(top, rgba(219, 219, 219, 0.57) 0%, rgba(217, 217, 217, 0.57) 1%, rgba(0, 0, 0, 0) 100%);
+    background: -webkit-linear-gradient(top, rgba(219, 219, 219, 0.57) 0%, rgba(217, 217, 217, 0.57) 1%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(to bottom, rgba(219, 219, 219, 0.57) 0%, rgba(217, 217, 217, 0.57) 1%, rgba(0, 0, 0, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#91dbdbdb', endColorstr='#00000000', GradientType=0);
 }
 
 .form-and-image .h3{
