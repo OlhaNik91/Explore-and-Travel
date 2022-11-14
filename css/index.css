@@ -317,25 +317,36 @@ nav{
     font-size: 15px;
     line-height: 42px;
 }
- .login-wrapper button.transparent{
-    position: relative;
-    border: 1px;
-    background: #FFF;
-}
 
-.login-wrapper button.transparent::before {
+.login-wrapper button {
+    position: relative;
+    width: 132px;
+    height: 44px;
+    border: none;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    color: var(--primary-color);
+    transition-duration: 0.3s;
+}
+ 
+.login-wrapper button::before {
     content: '';
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    border-radius: inherit;
-    background: linear-gradient(to right, #015244, #FB8F1D);
+    inset: 0;
+    border-radius: 8px;
+    padding: 2px;
+    background: linear-gradient(to right,#015244,#FB8F1D);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
 }
-
-
+ 
+.login-wrapper button:hover {
+    background-color:var(--primary-hover-color);
+    color: var(--fon-color);
+}
 
 
 /*form and image*/
